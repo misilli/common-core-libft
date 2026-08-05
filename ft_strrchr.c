@@ -1,11 +1,10 @@
 
 #include "libft.h"
 
-char *strrchr(const char *s, int c)
-{
+//char *strrchr(const char *s, int c)
+
 	
 
-}
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -26,9 +25,4 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		j = 0;
 	}
 	return (NULL);
-}
-
-int main ()
-{
-	char *p1 = strrchr("libft_moulinette", 't');
 }
