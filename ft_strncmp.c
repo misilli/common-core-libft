@@ -1,20 +1,31 @@
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
-	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0')
-	{
-		if (s1[i] == s2[i])
-		{
-			i++;
-		}
-		else
-		{
-			return (s1[i] - s2[i]);
-		}
-	}
-	if (i == n)
-		return (0);
-	return (s1[i] - s2[i]);
+void *ft_memcpy(void *dest, const void *src, size_t n)
+{
+    unsigned char    *pdest;
+    const unsigned char    *ps2;
+    size_t                i;
+
+    i = 0;
+    pdest = (unsigned char *)dest;
+    ps2 = (const unsigned char *)src;
+    while (i < n)
+    {
+        *pdest++ = *ps2++;
+        i++;
+    }
+    return (0);
+}
+
+int main() 
+{
+  char *p = "abcd";
+  
+  ft_memcpy(p,"zen",3 );
+
+  
+  return 0;
 }
