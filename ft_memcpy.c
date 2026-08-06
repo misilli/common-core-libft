@@ -3,17 +3,24 @@
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char	*pdest;
-	const unsigned char	*ps2;
-	size_t				i;
+    unsigned char			*pdest;
+    const unsigned char		*ps2;
+    size_t					i;
 
-	i = 0;
-	pdest = (unsigned char *)dest;
-	ps2 = (unsigned char *)src;
-	while (i < n)
-	{
+    i = 0;
+    pdest = (unsigned char *)dest;
+    ps2 = (const unsigned char *)src;
+    while (i < n)
+    {
         pdest[i] = ps2[i];
-		i++;
-	}
-	return (0);
+        i++;
+    }
+    return (dest);
 }
+
+  int main()
+  {
+    char p[] = "abcd";
+    ft_memcpy(p, "zen", 3);
+    return 0;
+  }
