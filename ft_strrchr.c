@@ -1,28 +1,24 @@
 
 #include "libft.h"
 
-//char *strrchr(const char *s, int c)
-
-	
-
-
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	int	j;
+	char	*last;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	if (little[j] == '\0')
-		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	last = NULL;
+	if (!s)
 	{
-		while ( (i +j) < len && big[i + j] == little[j] && big[i + j] != '\0')
-			j++;
-		if (little[j] == '\0')
-			return ((char *)&big[i]);
-		i++;
-		j = 0;
+		return (NULL);
 	}
-	return (NULL);
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			last = (char *)&s[i];
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return (last);
 }
