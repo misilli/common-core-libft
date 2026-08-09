@@ -5,20 +5,19 @@ char *ft_strtrim(char const *s1, char const *set)
 {
     char *final;
     size_t i;
-    size_t j;
+    size_t length;
 
-    j = 0;
     i = 0;
-    while (s1[i] != '\0' || set[i] != '\0' )
-    {
-        while (condition)
-        {
-            /* code */
-        }
-        
-
-        i++;
-    }
-
     
+    if (!s1)
+        return NULL;
+    length = ft_strlen(s1);
+    while (s1[i] && ft_strchr(set, s1[i]))
+        i++;
+    while (length > i && ft_strchr(set, s1[length - 1] ))
+        length--;
+    
+    length = length - i;
+    final = malloc(sizeof(char)*(length + 1));
+    ft_memmove(final,s1);
 }

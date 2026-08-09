@@ -8,10 +8,6 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	last = NULL;
-	if (!s)
-	{
-		return (NULL);
-	}
 	while (s[i])
 	{
 		if (s[i] == (char)c)
