@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-char **ft_split(char const *s, char c)
-{
-	
-=======
 char	**ft_split(char const *s, char c)
 {
 	char **final;
@@ -39,5 +34,4 @@ char	**ft_split(char const *s, char c)
 			return (NULL);
 		j++;
 	}
->>>>>>> refs/remotes/origin/main
 }
