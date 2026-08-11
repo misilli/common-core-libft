@@ -18,9 +18,3 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-  int main()
-  {
-    char p[] = "abcd";
-    ft_memcpy(p, "zen", 3);
-    return 0;
-  }
