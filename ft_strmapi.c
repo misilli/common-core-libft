@@ -1,31 +1,33 @@
 #include "libft.h"
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char *str;
-    int i;
+	char	*str;
+	int		i;
 
-    i = 0;
-    str = malloc(sizeof(char)*(ft_strlen(s)+1));
-    while (s[i] != '\0')
-    {
-        str[i] = f(i,s[i]);
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
-    
-    
+	i = 0;
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 #include <stdio.h>
-char ft_empty(unsigned int i, char a)
+
+char	ft_empty(unsigned int i, char a)
 {
-    printf("%d - %c\n" ,i ,a);
-    return (a+32);
+	printf("%d - %c\n", i, a);
+	return (a + 32);
 }
 
-int main()
+int	main(void)
 {
-    char *z = "ABX";
-    char *o = ft_strmapi( z ,&ft_empty);
-    printf("%s\n    ", o);
+	char	*z;
+	char	*o;
+
+	z = "ABX";
+	o = ft_strmapi(z, &ft_empty);
+	printf("%s\n    ", o);
 }

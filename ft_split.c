@@ -2,23 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char		*pdest;
-	const unsigned char	*ps2;
-	size_t				i;
-
-	i = 0;
-	pdest = (unsigned char *)dest;
-	ps2 = (const unsigned char *)src;
-	while (i < n)
-	{
-		pdest[i] = ps2[i];
-		i++;
-	}
-	return (dest);
-}
-char *free_memory(char **final, int j)
+char	**free_memory(char **final, int j)
 {
 	while (j >= 0)
 	{
@@ -28,56 +12,90 @@ char *free_memory(char **final, int j)
 	free(final);
 	return (NULL);
 }
+int	ft_wordlen(char const *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] != c && s[len] != '\0')
+		len++;
+	return (len);
+}
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+
+	j = 0;
+	i = 0;
+	while (i + 1 < size && src[i] != 0)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (size != 0)
+	{
+		dest[i] = '\0';
+	}
+	while (src[j])
+	{
+		j++;
+	}
+	return (j);
+}
+char	**ft_splitfill(char **final, char const *s, char c)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	j = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		{
+			k = ft_wordlen(s + i, c);
+			final[j] = malloc(sizeof(char) * (k + 1));
+			if (!final[j])
+				return (free_memory(final, j - 1));
+			ft_strlcpy(final[j++], s + i, k + 1);
+			i = i + k;
+		}
+		else
+			i++;
+	}
+	final[j] = NULL;
+	return (final);
+}
 
 char	**ft_split(char const *s, char c)
 {
 	char	**final;
 	int		i;
-	int		word;
 	int		length;
-	int		j;
 
-	j = 0;
 	i = 0;
-	word = 0;
+	length = 0;
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			word++;
+			length++;
 		i++;
 	}
-	final = malloc(sizeof(char *) * (word + 1));
+	final = malloc(sizeof(char *) * (length + 1));
 	if (!final)
-		return (free_memory(final, j - 1));
+		return (NULL);
 	i = 0;
-	while (s[i])
-	{
-		length = 0;
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
-		{
-			while (s[i] != c && s[i] != '\0')
-			{
-				length++;
-				i++;
-			}
-			final[j] = malloc(sizeof(char) * (length + 1));
-			if (!final[j])
-				return (free_memory(final, j - 1));
-			ft_memcpy(*(final + j), s + (i - length), length);
-			final[j][length] = '\0';
-			j++;
-		}
-		i++;
-	}
-	final[j] = NULL;
-	return (final);
+	return (ft_splitfill(final, s, c));
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char **result = ft_split(",,,Hello,,,,World,,This,,,,Is,A,,,,Test,,,", ',');
+	char **result = ft_split(",,,Hello,,,,World,,This,,,,Is,A,,,,Test", ',');
 	int i = 0;
 	while (result[i])
 	{

@@ -1,8 +1,8 @@
-# include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 
@@ -13,28 +13,25 @@ void *ft_memset(void *s, int c, size_t n)
 		ptr++;
 		n--;
 	}
-	return(s);
+	return (s);
 }
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *p;
+	char	*p;
 
 	p = malloc(nmemb * size);
 	if (!p)
 	{
-		return NULL;
+		return (NULL);
 	}
-	ft_memset(p,0,size);
-
-	return(p);
-
-	
+	ft_memset(p, 0, size);
+	return (p);
 }
 
-int main()
+int	main(void)
 {
-	char *a;
+	char	*a;
 
-	a = ft_calloc(4,5);
+	a = ft_calloc(4, 5);
 }

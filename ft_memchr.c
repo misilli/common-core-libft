@@ -19,6 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 #include <stdio.h>
+
 int	main(void)
 {
 	char p[] = "abcd";

@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 #include <stdio.h>
 
-int main()
+int	main(void)
 {
 	char *s1 = "----Hello-World----";
 	char *set = "-";
@@ -33,5 +33,5 @@ int main()
 	printf("Original: '%s'\n", s1);
 	printf("Trimmed: '%s'\n", trimmed);
 	free(trimmed);
-	return 0;
+	return (0);
 }

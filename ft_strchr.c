@@ -3,7 +3,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-    size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -14,5 +14,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if ((char)c == '\0')
 		return ((char *)&s[i]);
-	return NULL;
+	return (NULL);
 }
