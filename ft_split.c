@@ -74,20 +74,19 @@ char	**ft_split(char const *s, char c)
 {
 	char	**final;
 	int		i;
-	int		length;
+	int		word;
 
 	i = 0;
-	length = 0;
+	word = 0;
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			length++;
+			word++;
 		i++;
 	}
-	final = malloc(sizeof(char *) * (length + 1));
+	final = malloc(sizeof(char *) * (word + 1));
 	if (!final)
 		return (NULL);
-	i = 0;
 	return (ft_splitfill(final, s, c));
 }
 
@@ -95,7 +94,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char **result = ft_split(",,,Hello,,,,World,,This,,,,Is,A,,,,Test", ',');
+	char **result = ft_split(",,,Hello,,,,World,,This,,,,Is,A,,,,tTest,,", ',');
 	int i = 0;
 	while (result[i])
 	{
