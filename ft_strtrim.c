@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/15 19:38:54 by mumidill          #+#    #+#             */
+/*   Updated: 2026/08/15 19:38:55 by mumidill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -22,16 +33,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_memcpy(final, s1 + i, length);
 	final[length] = '\0';
 	return (final);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s1 = "----Hello-World----";
-	char *set = "-";
-	char *trimmed = ft_strtrim(s1, set);
-	printf("Original: '%s'\n", s1);
-	printf("Trimmed: '%s'\n", trimmed);
-	free(trimmed);
-	return (0);
 }

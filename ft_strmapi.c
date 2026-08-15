@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/15 19:45:31 by mumidill          #+#    #+#             */
+/*   Updated: 2026/08/15 19:45:31 by mumidill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
@@ -13,21 +26,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
-#include <stdio.h>
-
-char	ft_empty(unsigned int i, char a)
-{
-	printf("%d - %c\n", i, a);
-	return (a + 32);
-}
-
-int	main(void)
-{
-	char	*z;
-	char	*o;
-
-	z = "ABX";
-	o = ft_strmapi(z, &ft_empty);
-	printf("%s\n    ", o);
 }

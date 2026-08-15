@@ -1,25 +1,25 @@
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/15 19:09:32 by mumidill          #+#    #+#             */
+/*   Updated: 2026/08/15 19:28:15 by mumidill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n > 0)
-	{
-		*ptr = (unsigned char)c;
-		ptr++;
-		n--;
-	}
-	return (s);
-}
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*p;
 
+	if (size != 0 && nmemb > __SIZE_MAX__ / size)
+	{
+		return (NULL);
+	}
 	p = malloc(nmemb * size);
 	if (!p)
 	{
@@ -27,11 +27,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	ft_memset(p, 0, size);
 	return (p);
-}
-
-int	main(void)
-{
-	char	*a;
-
-	a = ft_calloc(4, 5);
 }

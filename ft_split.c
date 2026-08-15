@@ -1,6 +1,16 @@
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/15 19:36:28 by mumidill          #+#    #+#             */
+/*   Updated: 2026/08/15 19:50:52 by mumidill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	**free_memory(char **final, int j)
 {
@@ -12,6 +22,7 @@ char	**free_memory(char **final, int j)
 	free(final);
 	return (NULL);
 }
+
 int	ft_wordlen(char const *s, char c)
 {
 	size_t	len;
@@ -22,28 +33,6 @@ int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	j;
-
-	j = 0;
-	i = 0;
-	while (i + 1 < size && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (size != 0)
-	{
-		dest[i] = '\0';
-	}
-	while (src[j])
-	{
-		j++;
-	}
-	return (j);
-}
 char	**ft_splitfill(char **final, char const *s, char c)
 {
 	int	i;
@@ -88,20 +77,4 @@ char	**ft_split(char const *s, char c)
 	if (!final)
 		return (NULL);
 	return (ft_splitfill(final, s, c));
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char **result = ft_split(",,,Hello,,,,World,,This,,,,Is,A,,,,tTest,,", ',');
-	int i = 0;
-	while (result[i])
-	{
-		printf("%s\n", result[i]);
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
 }
