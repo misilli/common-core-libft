@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:41:14 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:42:49 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/16 by mumidill                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,14 @@ char			*ft_itoa(int n);
 int				ft_isalpha(int c);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			*ft_memcpy(void *dest, const void *src, size_t n);
-char			*ft_strtrim(char const *s1, char const *set);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

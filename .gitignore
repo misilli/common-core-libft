@@ -1,2 +1,5 @@
 .vscode/
 build/
+main_test.c
+tester
+a.out
