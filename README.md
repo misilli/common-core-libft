@@ -43,9 +43,9 @@ Libft, aşağıdaki fonksiyon gruplarını içerir:
 ```c
 typedef struct s_list
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+    void            *content;
+    struct s_list   *next;
+}   t_list;
 ```
  
 Her fonksiyon, `man` sayfalarındaki orijinal davranışa mümkün olduğunca sadık kalınarak, yeniden yazılmıştır.
