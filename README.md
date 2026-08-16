@@ -27,19 +27,19 @@ Kullanmak için projenize `#include "libft.h"` şeklinde kütüphaneyi eklemeniz
 ### Gereksinimler
 
 Libft kütüphanesini derlemek için güncel bir arşiv aracı, C derleyicisi ve make gerekmektedir.
- 
+
 ## Kütüphane Detayı
- 
+
 Libft, aşağıdaki fonksiyon gruplarını içerir:
- 
+
 | Kategori | Fonksiyonlar |
-|----------|--------------|
+| -------- | ------------ |
 | Libc fonksiyonları | `ft_strlen`, `ft_memcpy`, `ft_memset`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_strdup`, `ft_strncmp`, `ft_strchr`, `ft_strrchr`, `ft_strnstr`, `ft_strlcpy`, `ft_strlcat`, `ft_atoi`, `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`, `ft_calloc`, `ft_bzero` |
 | Ek fonksiyonlar | `ft_split`, `ft_itoa`, `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_strmapi`, `ft_striteri`, `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
 | Bağlı liste fonksiyonları | `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap` |
- 
+
 `t_list` yapısı, `libft.h` içinde şu şekilde tanımlıdır:
- 
+
 ```c
 typedef struct s_list
 {
@@ -47,7 +47,7 @@ typedef struct s_list
     struct s_list   *next;
 }   t_list;
 ```
- 
+
 Her fonksiyon, `man` sayfalarındaki orijinal davranışa mümkün olduğunca sadık kalınarak, yeniden yazılmıştır.
 
 ## Kaynaklar
