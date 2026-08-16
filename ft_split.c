@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	**free_memory(char **final, int j)
+static char	**free_memory(char **final, int j)
 {
 	while (j >= 0)
 	{
@@ -23,7 +23,7 @@ char	**free_memory(char **final, int j)
 	return (NULL);
 }
 
-int	ft_wordlen(char const *s, char c)
+static int	ft_wordlen(char const *s, char c)
 {
 	size_t	len;
 
@@ -33,7 +33,7 @@ int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
-char	**ft_splitfill(char **final, char const *s, char c)
+static char	**ft_splitfill(char **final, char const *s, char c)
 {
 	int	i;
 	int	j;
