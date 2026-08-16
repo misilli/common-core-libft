@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:52:32 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:52:33 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/16 17:43:14 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, &s[i], 1);
+	write(fd, "\n", 1);
 }

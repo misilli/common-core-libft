@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:51:36 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:51:54 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/16 17:44:21 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-2147483648", 11);
 	else if (n < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		ft_putnbr_fd(-n, fd);
 	}
 	else if (n >= 10)

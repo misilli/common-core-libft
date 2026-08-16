@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:09:32 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:28:15 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/16 17:47:40 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	{
 		return (NULL);
 	}
-	ft_memset(p, 0, size);
+	ft_memset(p, 0, size * nmemb);
 	return (p);
 }
