@@ -24,12 +24,6 @@ Libft, üç ana bölümden oluşur:
 
 Kullanmak için projenize `#include "libft.h"` şeklinde kütüphaneyi eklemeniz gerekir.
 
-Sonrasında projenizi derlerken aşağıdaki şekilde derlemeniz gerekir:
-
-\`\`\`bash
-cc kaynak_dosyanız.c -L. -lft
-\`\`\`
-
 ### Gereksinimler
 
 Libft kütüphanesini derlemek için güncel bir arşiv aracı, C derleyicisi ve make gerekmektedir.
