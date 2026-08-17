@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:36:28 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:50:52 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/17 18:31:12 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	word = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))

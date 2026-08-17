@@ -6,7 +6,7 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 18:58:23 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:07:46 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/17 20:49:23 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	value;
-	int	i;
-	int	sign;
+	long	value;
+	int		i;
+	int		sign;
 
 	i = 0;
 	value = 0;
