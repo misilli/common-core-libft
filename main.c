@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
 #include "libft.h"
 
 int main(void)
@@ -44,5 +45,10 @@ int main(void)
 	}
 	ft_lstclear(&m, free);
 	ft_lstclear(&head, free);
+	char *kelime = " ben kelimeyim";
+	ft_putstr_fd(kelime, 1);
+	int fd = open("dosya.txt", O_WRONLY | O_CREAT, 0644);
+	ft_putstr_fd(kelime, fd);
+
 	return (0);
 }
