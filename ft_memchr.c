@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:32:49 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:32:53 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:07:16 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

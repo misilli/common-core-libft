@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:47:18 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:48:37 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:00:06 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

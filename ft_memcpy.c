@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:54:14 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:54:15 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:06:46 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

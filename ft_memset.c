@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:52:49 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/17 21:00:50 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:05:08 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

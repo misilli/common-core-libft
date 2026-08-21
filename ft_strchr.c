@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:50:09 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:50:10 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:01:19 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {

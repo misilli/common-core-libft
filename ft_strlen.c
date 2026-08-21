@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:46:54 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/15 19:47:03 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:59:54 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {

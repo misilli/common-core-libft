@@ -6,11 +6,11 @@
 /*   By: mumidill <mumidill@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 19:43:21 by mumidill          #+#    #+#             */
-/*   Updated: 2026/08/17 20:45:35 by mumidill         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:58:12 by mumidill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
